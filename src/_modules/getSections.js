@@ -1,3 +1,4 @@
+import { base } from '$app/paths';
 import fs from 'fs';
 import path from 'path';
 import * as fleece from 'golden-fleece';
@@ -82,7 +83,7 @@ export default function (returnHtml = true) {
 			renderer.heading = function (text, level) {
 				const slug = slugify(text, null, store);
 				// TODO, better anchor handling maybe with even newer sapper?
-				return `<h${level} id="${slug}">${text}<a href="/guide#${slug}"> </a></h${level}>`;
+				return `<h${level} id="${slug}">${text}<a href="${base}/guide#${slug}"> </a></h${level}>`;
 			};
 
 			renderer.code = (source, lang) => {

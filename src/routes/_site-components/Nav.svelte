@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 
@@ -71,16 +72,16 @@
 		on:click={toggleOpen}
 		on:keypress={toggleOpen}>{open ? 'Close' : 'Menu'}</span
 	>
-	<a href="/" class="logo">Layer Cake</a>
+	<a href="/{base}" class="logo">Layer Cake</a>
 </div>
 
 <ul class="dropdown">
 	<li>
 		<select on:change={loadPage} bind:value={segment}>
-			{#if segment.startsWith('/components')}
+			{#if segment.startsWith('{base}/components')}
 				<option value={segment} disabled>Select...</option>
 			{/if}
-			{#if segment.startsWith('/guide')}
+			{#if segment.startsWith('{base}/guide')}
 				<option value={segment} disabled>Select...</option>
 			{/if}
 			<option value="/">All</option>
@@ -102,16 +103,18 @@
 	<ul class="primary">
 		<li>
 			<a
-				class={segment === '/components' ? 'active' : ''}
-				href="/components"
+				class={segment === '{base}/components' ? 'active' : ''}
+				href="{base}/components"
 				on:click={() => (open = false)}
 				><span class="wide-name">Component gallery</span><span class="short-name">Components</span
 				></a
 			>
 		</li>
 		<li>
-			<a class={segment === '/guide' ? 'active' : ''} href="/guide" on:click={() => (open = false)}
-				>Guide</a
+			<a
+				class={segment === '{base}/guide' ? 'active' : ''}
+				href="{base}/guide"
+				on:click={() => (open = false)}>Guide</a
 			>
 		</li>
 		<li>

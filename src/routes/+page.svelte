@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import hljs from 'highlight.js';
 	import examples from './_examples.js';
 	import examplesSsr from './_examples_ssr.js';
@@ -86,11 +87,11 @@
 		</p>
 
 		<p>
-			Unlike other libraries, <a href="/components">chart components</a> live
+			Unlike other libraries, <a href="{base}/components">chart components</a> live
 			<span class="strong">inside your project</span>, so you have complete control for
 			<span class="strong">customization</span>. It also includes some handy
-			<a href="/guide#helper-functions">helper functions</a> to help format your data into the right
-			shape.
+			<a href="{base}/guide#helper-functions">helper functions</a> to help format your data into the
+			right shape.
 		</p>
 
 		<p>
@@ -112,7 +113,7 @@
 		{#each examples as example}
 			<div class="gallery-item">
 				<h4 class="title">
-					<a href="/example/{example.slug}">{example.title}</a>
+					<a href="{base}/example/{example.slug}">{example.title}</a>
 					<a
 						class="edit-repl"
 						href="https://svelte.dev/repl/{example.replPath}"
@@ -155,7 +156,7 @@
 		{#each examplesSsr as example}
 			<div class="gallery-item" class:scaled={example.title.toLowerCase().includes('map')}>
 				<h4 class="title">
-					<a href="/example-ssr/{example.slug}">{example.title}</a>
+					<a href="{base}/example-ssr/{example.slug}">{example.title}</a>
 					<a
 						class="edit-repl"
 						href="https://svelte.dev/repl/{example.replPath}"

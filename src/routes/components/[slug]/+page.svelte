@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import MarkdownIt from 'markdown-it';
 	import hljs from 'highlight.js';
 
@@ -111,7 +112,7 @@
 
 <div class="main">
 	<div class="all-components">
-		<a href="/components">← View all components</a>
+		<a href="{base}/components">← View all components</a>
 	</div>
 	<h1>{component.slug} component</h1>
 

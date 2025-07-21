@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	// import { afterUpdate } from 'svelte';
 	export let open = false;
 	export let activeGuideSection = undefined;
@@ -22,13 +23,13 @@
 		<li>
 			<a
 				class="section {section.slug === activeGuideSection ? 'active' : ''}"
-				href="/guide#{section.slug}"
+				href="{base}/guide#{section.slug}"
 				on:click={close}>{section.metadata.title}</a
 			>
 			{#each section.subsections as subsection}
 				<a
 					class="subsection {subsection.slug === activeGuideSection ? 'active' : ''}"
-					href="/guide#{subsection.slug}"
+					href="{base}/guide#{subsection.slug}"
 					on:click={close}>{subsection.title}</a
 				>
 			{/each}

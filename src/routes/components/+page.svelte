@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { afterUpdate } from 'svelte';
 	import { groupBy, sortBy } from 'underscore';
 
@@ -106,7 +107,7 @@
 				<!-- {console.log(activeSection, slugify(componentGroup.name))} -->
 				<a
 					class="section {activeSection === slugify(componentGroup.name) ? 'active' : ''}"
-					href="/components#{slugify(componentGroup.name)}">{componentGroup.name}</a
+					href="{base}/components#{slugify(componentGroup.name)}">{componentGroup.name}</a
 				>
 			</li>
 		{/each}
@@ -122,13 +123,14 @@
 			you started. These are meant to serve as starting points for many common chart types. They
 			have a few built-in options to be flexible for handling different scenarios so they can be
 			reused as much as possible. For example, the <a
-				href="/components/Scatter.svg.svelte"
+				href="{base}/components/Scatter.svg.svelte"
 				target="_blank">Scatter</a
 			>
 			components support both linear and ordinal scales so you can use them in configurations like a
-			regular <a href="/example/Scatter" target="_blank">Scatter plot</a> but also charts like the
-			<a href="/example/Timeplot" target="_blank">Time of Day</a> plot where the y-scale is made up of
-			groups.
+			regular <a href="{base}/example/Scatter" target="_blank">Scatter plot</a> but also charts like
+			the
+			<a href="{base}/example/Timeplot" target="_blank">Time of Day</a> plot where the y-scale is made
+			up of groups.
 		</p>
 
 		<p>
@@ -136,7 +138,7 @@
 				class="label percent-range">%-range</span
 			>
 			are optimized to be used server-side with the
-			<a href="/guide#percentrange"><code>percentRange={true}</code></a> prop.
+			<a href="{base}/guide#percentrange"><code>percentRange={true}</code></a> prop.
 		</p>
 	</div>
 
@@ -150,7 +152,8 @@
 						<div class="component-block">
 							<div class="component-name">
 								<span
-									><a href="/components/{item.slug}">{item.name || formatName(item.slug)}</a></span
+									><a href="{base}/components/{item.slug}">{item.name || formatName(item.slug)}</a
+									></span
 								>
 								<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 								{@html item.classes

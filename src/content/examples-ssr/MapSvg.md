@@ -2,4 +2,4 @@ A map component using [d3-geo](https://github.com/d3/d3-geo) for the projection.
 
 To render server-side, this example uses the `fixedAspectRatio` property, which the user sets ahead of time.
 
-For an example using a client-side projection function, see the [layered map](/example-ssr/MapLayered) example or the [map components examples](https://layercake.graphics/components#map).
+For an example using a client-side projection function, see the [layered map](https://mhkeller.com/layercake.pre-runes/example-ssr/MapLayered) example or the [map components examples](https://mhkeller.com/layercake.pre-runes/components#map).

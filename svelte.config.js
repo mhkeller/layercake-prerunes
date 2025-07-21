@@ -7,6 +7,8 @@ import adapter from '@sveltejs/adapter-static';
 const config = {
 	root: normalizePath(path.resolve('./')),
 
+	paths: { base: '/layercake.pre-runes' },
+
 	preprocess: preprocess(),
 
 	kit: {

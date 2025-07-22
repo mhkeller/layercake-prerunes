@@ -24,6 +24,8 @@
 		path = $page.url.pathname;
 		// type = path.split('/')[1];
 		segment = `/${path.replace('/', '')}`;
+		console.log('segment', segment);
+
 		// segment = `/${path.replace('/', '').replace(/\$/, '')}`;
 		// slug = path.replace(/\/$/, '').split('/').pop();
 	}
@@ -37,7 +39,7 @@
 
 	function loadPage() {
 		open = false;
-		goto(this.value || '/');
+		goto(this.value || base);
 	}
 
 	function toggleOpen() {
@@ -72,7 +74,7 @@
 		on:click={toggleOpen}
 		on:keypress={toggleOpen}>{open ? 'Close' : 'Menu'}</span
 	>
-	<a href="/{base}" class="logo">Layer Cake</a>
+	<a href="{base}" class="logo">Layer Cake</a>
 </div>
 
 <ul class="dropdown">
@@ -84,16 +86,16 @@
 			{#if segment.startsWith('{base}/guide')}
 				<option value={segment} disabled>Select...</option>
 			{/if}
-			<option value="/">All</option>
+			<option value="{base}">All</option>
 			<option class="header" disabled></option>
 			<option class="header" disabled>Client-side</option>
 			{#each examples.slice().sort((a, b) => (a.title < b.title ? -1 : 1)) as example}
-				<option value="/{base}/example/{example.slug}">{slimName(example.title)}</option>
+				<option value="{base}/example/{example.slug}">{slimName(example.title)}</option>
 			{/each}
 			<option class="header" disabled></option>
 			<option class="header" disabled>Server-side</option>
 			{#each examplesSsr.slice().sort((a, b) => (a.title < b.title ? -1 : 1)) as example}
-				<option value="/{base}/example-ssr/{example.slug}">{slimName(example.title)}</option>
+				<option value="{base}/example-ssr/{example.slug}">{slimName(example.title)}</option>
 			{/each}
 		</select>
 	</li>

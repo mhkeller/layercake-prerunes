@@ -1,4 +1,4 @@
-Layer Cake  [<img src="https://raw.githubusercontent.com/mhkeller/layercake.pre-runes/main/static/layercake-logo-500x400.png" width="115" align="right" alt="layercake-logo">](https://mhkeller.github.io/layercake)
+Layer Cake  [<img src="https://raw.githubusercontent.com/mhkeller/layercake-prerunes/main/static/layercake-logo-500x400.png" width="115" align="right" alt="layercake-logo">](https://mhkeller.github.io/layercake)
 ===
 
 # 🚨 ARCHIVED REPOSITORY 🚨
@@ -10,16 +10,16 @@ Layer Cake  [<img src="https://raw.githubusercontent.com/mhkeller/layercake.pre-
 - **🔗 [github.com/mhkeller/layercake](https://github.com/mhkeller/layercake)** - Main repository
 
 ### To view this archived documentation, please visit:
-- **🔗 [mhkeller.github.io/layercake.pre-runes](https://mhkeller.github.io/layercake.pre-runes)** - Archived documentation website.
+- **🔗 [mhkeller.github.io/layercake-prerunes](https://mhkeller.github.io/layercake-prerunes)** - Archived documentation website.
 
 ---
 
 > a framework for mostly-reusable graphics with [svelte](https://github.com/sveltejs/svelte)
 
- 🍰 [See examples](https://mhkeller.github.io/layercake.pre-runes)
- 🍰 [Read the guide](https://mhkeller.github.io/layercake.pre-runes/guide)
- 🍰 [API docs](https://mhkeller.github.io/layercake.pre-runes/guide#layercake-props)
- 🍰 [View the Component Gallery](https://mhkeller.github.io/layercake.pre-runes/components)
+ 🍰 [See examples](https://mhkeller.github.io/layercake-prerunes)
+ 🍰 [Read the guide](https://mhkeller.github.io/layercake-prerunes/guide)
+ 🍰 [API docs](https://mhkeller.github.io/layercake-prerunes/guide#layercake-props)
+ 🍰 [View the Component Gallery](https://mhkeller.github.io/layercake-prerunes/components)
  🍰 [Try the starter template](https://github.com/mhkeller/layercake-template)
 
 ## Svelte versions

@@ -79,10 +79,10 @@
 <ul class="dropdown">
 	<li>
 		<select on:change={loadPage} bind:value={segment}>
-			{#if segment.startsWith('{base}/components')}
+			{#if segment.startsWith(`${base}/components`)}
 				<option value={segment} disabled>Select...</option>
 			{/if}
-			{#if segment.startsWith('{base}/guide')}
+			{#if segment.startsWith(`${base}/guide`)}
 				<option value={segment} disabled>Select...</option>
 			{/if}
 			<option value="{base}/">All</option>
